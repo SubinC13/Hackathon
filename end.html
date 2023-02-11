@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Bootstrap demo</title>
+        <link rel="stylesheet" href="end.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    </head>
+    <body>
+        <div class="col">
+            <h1 style="color: white; font-size: 60px; margin-top: 70px;" class="px-5 pt-5">
+                <b>
+                    Thank you <br />
+                    For fighting with us <br />
+                    To reduce drugs
+                </b>
+            </h1>
+
+            <div style="color: white; font-size: 30px; margin-top: 50px;">
+                <p class="px-5"><b>Your application id :</b></p>
+                <p class="px-5" id="randomString"></p>
+            </div>
+        </div>
+
+        <script>
+            var length = 20;
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345654_.,<>/';!@#$%^&*(){}:76576364647585789";
+            var randomString = "";
+            for (var i = 0; i < length; i++) {
+                var randomIndex = Math.floor(Math.random() * characters.length);
+                randomString += characters.charAt(randomIndex);
+            }
+            document.getElementById("randomString").innerHTML = randomString;
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+</html>
